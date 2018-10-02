@@ -1,12 +1,11 @@
 <template>
-  <section class="hello-world">
-    <h1>Hello!</h1>
+  <section class="item">
   </section>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Item',
 };
 </script>
 
