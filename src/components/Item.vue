@@ -68,6 +68,7 @@ export default {
     &__value {
       display: inline;
       margin: .3rem 0;
+      line-height: 130%;
     }
 
     &__title {
