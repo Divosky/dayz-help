@@ -30,6 +30,22 @@ export default {
 <style lang="scss">
 :root {
   --primary: #42b983;
+  --border-radius: 3px;
+  --base-color: #fafafa;
+  --base-bg-color: #1a1a1a;
+  --base-padding: 1rem;
+  --base-margin: 1rem;
+  --base-font-size: 1rem;
+  //
+  --nav-bg-color: #000000aa;
+  --nav-link-color: var(--primary);
+  --nav-link-bg--hover: #ffffff33;
+  --nav-link-bg--active: #ffffff1a;
+  //
+  --main-bg: #000000dd;
+  //
+  --input-bg: var(--base-bg-color);
+  --input-color: var(--base-color);
 }
 
 html,
@@ -44,9 +60,9 @@ body,
 
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  color: #fafafa;
-  background: #1a1a1a url(https://i.imgur.com/hLCJx5y.png);
+  font-size: var(--base-font-size);
+  color: var(--base-color);
+  background: var(--base-bg-color) url(https://i.imgur.com/hLCJx5y.png);
   background-attachment: fixed;
   background-size: cover;
   -webkit-font-smoothing: antialiased;
@@ -58,7 +74,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  background: #000000aa;
+  background: var(--nav-bg-color);
 
   &__toggler {
     &:after {
@@ -81,24 +97,24 @@ body {
 
   &__link {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--nav-link-color);
 
     &:hover,
     &.router-link-exact-active:hover {
-      background: #ffffff33;
+      background: var(--nav-link-bg--hover);
       transition: .13s ease-in-out;
     }
 
     &.router-link-exact-active {
-      background: #ffffff1a;
+      background: var(--nav-link-bg--active);
     }
   }
 }
 
 .header__branding {
- margin: 3rem 0;
+ margin: calc(var(--base-margin) * 3) 0;
  text-align: center;
- font-size: 3rem;
+ font-size: calc(var(--base-font-size) * 3);
  font-weight: 300;
 
  &--primary {
@@ -107,9 +123,9 @@ body {
 }
 
 .main {
-  background: #000000dd;
-  border-radius: 3px;
-  padding: .5rem 1rem;
+  background: var(--main-bg);
+  border-radius: var(--border-radius);
+  padding: calc(var(--base-padding) * .5) var(--base-padding);
   width: 75%;
   margin: 0 auto;
 }
@@ -117,6 +133,15 @@ body {
 .footer {
   text-align: right;
   padding: 0 .5rem;
+}
+
+// Forms
+.input {
+  padding: calc(var(--base-padding) * .5) calc(var(--base-padding) * .7);
+  background: var(--input-bg);
+  border: 0;
+  color: var(--input-color);
+  border-radius: var(--border-radius)
 }
 
 @media (min-width: 700px) {

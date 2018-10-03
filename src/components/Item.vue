@@ -34,7 +34,7 @@ export default {
   .items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: var(--base-margin);
 
     &__item {
       margin: 0;
@@ -58,7 +58,7 @@ export default {
 
     &__image {
       max-width: 100%;
-      border-radius: 3px;
+      border-radius: var(--border-radius);
     }
   }
 
