@@ -1,6 +1,6 @@
 <template>
   <div class="items">
-    <div class="item" v-for="item in specifiedItem" :key="item.id">
+    <div class="items__item" v-for="item in specifiedItem" :key="item.id">
     <h3 class="items__item__title">{{ item.name }}</h3>
     <a class="items__item__preview" href="#" target="_blank"><img class="items__item__preview__image" src="http://placehold.it/250x250" alt="Bloodbag"></a>
     <dl class="items__item__description">
@@ -38,6 +38,7 @@ export default {
 
     &__item {
       margin: 0;
+      width: fit-content;
     }
   }
 }
