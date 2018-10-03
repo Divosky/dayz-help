@@ -39,9 +39,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .page__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+@import '@/assets/scss/_extends.scss';
+
+.page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  @extend %content-container;
+}
 </style>

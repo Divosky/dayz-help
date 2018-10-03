@@ -6,6 +6,7 @@
         <input id="toggleNavigation" type="checkbox">
         <router-link class="nav__item nav__link" to="/">Home</router-link>
         <router-link class="nav__item nav__link" to="/items">Items</router-link>
+        <router-link class="nav__item nav__link" to="/updates">Updates</router-link>
       </nav>
       <h1 class="header__branding">DayZ<span class="header__branding--primary">42O</span></h1>
     </header>
@@ -123,8 +124,6 @@ body {
 }
 
 .main {
-  background: var(--main-bg);
-  border-radius: var(--border-radius);
   padding: calc(var(--base-padding) * .5) var(--base-padding);
   width: 75%;
   margin: 0 auto;
