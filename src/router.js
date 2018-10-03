@@ -26,5 +26,10 @@ export default new Router({
       name: 'updates',
       component: () => import('./views/Updates.vue'),
     },
+    {
+      path: '/generator',
+      name: 'generator',
+      component: () => import('./views/Generator.vue'),
+    },
   ],
 });
