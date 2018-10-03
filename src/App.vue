@@ -7,6 +7,7 @@
         <router-link class="nav__item nav__link" to="/">Home</router-link>
         <router-link class="nav__item nav__link" to="/items">Items</router-link>
       </nav>
+      <h1 class="header__branding">DayZ<span class="header__branding--primary">42O</span></h1>
     </header>
     <router-view/>
     <footer class="footer">
@@ -92,6 +93,25 @@ body {
       background: #ffffff1a;
     }
   }
+}
+
+.header__branding {
+ margin: 3rem 0;
+ text-align: center;
+ font-size: 3rem;
+ font-weight: 300;
+
+ &--primary {
+   color: var(--primary);
+ }
+}
+
+.main {
+  background: #000000dd;
+  border-radius: 3px;
+  padding: .5rem 1rem;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .footer {
