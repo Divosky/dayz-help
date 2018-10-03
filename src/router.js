@@ -21,5 +21,10 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "items" */ './views/Items.vue'),
     },
+    {
+      path: '/updates',
+      name: 'updates',
+      component: () => import('./views/Updates.vue'),
+    },
   ],
 });
