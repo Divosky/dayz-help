@@ -30,19 +30,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@supports (display: grid) {
-  .items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: var(--base-margin);
-
-    &__item {
-      margin: 0;
-      width: fit-content;
-    }
-  }
-}
-
 .items__item {
   display: inline-block;
   margin: 1rem;
@@ -90,6 +77,20 @@ export default {
     }
   }
 }
+
+@supports (display: grid) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: var(--base-margin);
+
+    &__item {
+      margin: 0;
+      width: fit-content;
+    }
+  }
+}
+
 
 @media (min-width: 700px) {
   .items__item__description {
