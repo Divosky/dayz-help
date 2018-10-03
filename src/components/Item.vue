@@ -3,7 +3,7 @@
     <div class="item" v-for="item in specifiedItem" :key="item.id">
     <h3 class="items__item__title">{{ item.name }}</h3>
     <a class="items__item__preview" href="#" target="_blank"><img class="items__item__preview__image" src="http://placehold.it/250x250" alt="Bloodbag"></a>
-    <dl>
+    <dl class="items__item__description">
       <dt class="items__item__description__title">Location:</dt>
       <dd class="items__item__description__value">{{ item.company.name }}</dd>
 
@@ -33,7 +33,7 @@ export default {
 @supports (display: grid) {
   .items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: var(--base-margin);
 
     &__item {
@@ -63,6 +63,7 @@ export default {
   }
 
   &__description {
+    margin: var(--base-margin) auto;
 
     &__title,
     &__value {
@@ -86,6 +87,12 @@ export default {
         white-space: pre
       }
     }
+  }
+}
+
+@media (min-width: 700px) {
+  .items__item__description {
+    width: 90%;
   }
 }
 </style>
