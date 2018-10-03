@@ -32,6 +32,7 @@ export default {
 :root {
   --primary: #42b983;
   --border-radius: 3px;
+  --box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   --base-color: #fafafa;
   --base-bg-color: #1a1a1a;
   --base-padding: 1rem;
