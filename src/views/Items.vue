@@ -5,6 +5,7 @@
       <input v-model="searchTerm" type="text" class="input" placeholder="Search for an item">
     </section>
     <section class="items">
+      <Loader v-if="loader" />
       <Item :items="items" :searchTerm="searchTerm" />
     </section>
   </main>
@@ -22,6 +23,7 @@ export default {
     return {
       searchTerm: '',
       items: [],
+      loader: true,
     };
   },
   created() {
@@ -29,6 +31,7 @@ export default {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
+        this.loader = false;
         this.items = data;
       });
   },

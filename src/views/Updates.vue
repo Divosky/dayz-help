@@ -2,12 +2,14 @@
   <main class="main">
     <section class="page__header">
       <h3 class="page__title">Updates</h3>
+      <Loader v-if="loader" />
       <Update :updates="updates"/>
     </section>
   </main>
 </template>
 
 <script>
+import Loader from '@/components/Loader.vue';
 import Update from '@/components/Update.vue';
 
 // Random content to have something to show
@@ -18,6 +20,7 @@ export default {
   data() {
     return {
       updates: [],
+      loader: true,
     };
   },
   created() {
@@ -25,11 +28,13 @@ export default {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
+        this.loader = false;
         this.updates = data;
       });
   },
   components: {
     Update,
+    Loader,
   },
 };
 </script>
