@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import Loader from '@/components/Loader.vue';
 import Item from '@/components/Item.vue';
 
 // Random content to have something to show
@@ -37,6 +38,7 @@ export default {
   },
   components: {
     Item,
+    Loader,
   },
 };
 </script>
