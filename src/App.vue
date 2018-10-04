@@ -8,6 +8,7 @@
         <router-link class="nav__item nav__link" to="/items">Items</router-link>
         <router-link class="nav__item nav__link" to="/updates">Updates</router-link>
         <router-link class="nav__item nav__link" to="/generator">Generator</router-link>
+        <router-link class="nav__item nav__link" to="/faq">FAQ</router-link>
       </nav>
       <h1 class="header__branding">DayZ<span class="header__branding--primary">42O</span></h1>
     </header>

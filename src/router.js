@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import Faq from './views/Faq.vue';
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/generator',
       name: 'generator',
       component: () => import('./views/Generator.vue'),
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: Faq,
     },
   ],
 });
